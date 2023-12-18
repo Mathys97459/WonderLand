@@ -272,3 +272,72 @@ h1, h2, h3{
     border-radius: 0px;
     transition: all 0.2s;
 }
+
+footer{
+    background-color: #6F45FF;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+footer .informations{
+    display: flex;
+    align-items: center;
+    gap: 25%;
+    padding-top: 6%;
+    padding-bottom: 4%;
+}
+footer .informations .text{
+    flex: 20%;
+}
+footer .informations p{
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+footer .informations .logo{
+    width: 150px;
+}
+f
+footer .socials a {
+    margin: 0px 25px;
+}
+footer .socials #tiktok {
+    width: 12px;
+}
+footer .informations .newsletter{
+    flex: 20%;
+}
+footer .informations .newsletter input[type="text"]{
+    width: 90%;
+    height: 35px;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+    padding-left: 10px;
+}
+footer .informations .newsletter button{
+    cursor: pointer;
+    position: absolute;
+    margin-top: 2px;
+    margin-left: -37px;
+    width: 35px;
+    height: 35px;
+    background-color: #6F45FF;
+    border: none;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+footer .informations .newsletter button:hover{
+    background-color: #CC67F6;
+    transition: all 0.3s;
+}
+footer .informations .newsletter button img{
+    margin-top: 5px;
+    transform: scale(0.9);
+}
+
+footer .copyright p{
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 10px;
+}
