@@ -1,0 +1,342 @@
+@font-face {
+    font-family: 'Stora';
+    src: url('../stora/Stora.ttf') format('truetype');
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.banner{
+    display: flex;
+    margin-left: 6%;
+}
+.banner .text{
+    flex: 55%;
+    margin-top: 18rem;
+    padding-right: 4rem;
+}
+.banner .text h1{
+    font-size: clamp(42px, 4vw, 60px);
+    line-height: clamp(42px, 5vw, 70px);
+}
+.banner .text img{
+    display: block;
+    transform: translateY(-25%);
+    /*margin-left: auto;
+    margin-right: auto;/*/
+    width: clamp(200px, 50%, 300px);
+}
+.banner .text .buttons{
+    margin-top: 3rem;
+}
+.banner .text a.button1{
+    margin-right: 20px
+}
+
+.banner .banner-design{
+    flex: 45%;
+    padding-top: 7rem;
+    background-color: #1C3533;
+    z-index: -1;
+}
+.banner .banner-design img{
+    position: relative;
+    width: clamp(500px,50vw ,700px);
+    z-index: 0;
+    transform: translateX(-12%);
+}
+
+.stats{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #6F45FF;
+    width: 100%;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    margin-top: -2rem;
+    border-top: 2px solid #020307;
+    border-bottom: 2px solid #020307;
+}
+.stats div{
+    display: flex;
+    align-items: center;
+}
+.stats div::before{
+    content: url(../img/star.svg);
+    transform: scale(0.6);
+}
+.stats div h2{
+    line-height: 2rem;
+}
+
+.artistes{
+    margin-left: 6%;
+    margin-right: 6%;
+    margin-top: 4rem;
+}
+.artistes .title{
+    display: flex;
+    align-items: center;
+}
+.artistes .title::before{
+    content: url(../img/star.svg);
+    transform: scale(0.6);
+}
+.artistes .first-row, .artistes .second-row{
+    display: flex;
+    gap: 5%;
+    margin-top: 20px;
+    margin-bottom: 70px;
+}
+.artistes .card-artiste{
+    position: relative;
+    background-color: #6F45FF;
+    display: flex;
+    padding-right: 20px;
+    flex: 40%;
+}
+.artistes .card-artiste::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    top: 10px; 
+    right: 0px;
+    bottom: -10px;
+    left: 10px;
+    background-color: #FFACEE;
+    border: 1px solid #FFACEE;
+    border-radius: 0px;
+    z-index: -1;
+    transition: all 0.2s;
+}
+.artistes .card-artiste .img{
+    flex: 40%;
+    display: flex;
+    justify-content: center;
+}
+.artistes .card-artiste .img img{
+    width: 200px;
+}
+.artistes .card-artiste .infos{
+    flex: 60%;
+    margin-top: auto;
+    margin-bottom: auto;
+
+}
+.artistes .card-artiste .infos .type{
+    display: flex;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+.artistes .card-artiste .infos .heure{
+    display: flex;
+    margin-bottom: 15px;
+    margin-left: 20px;
+}
+.artistes .card-artiste .infos .type::before{
+    content: url(../img/micro.svg);
+    transform: translateY(10%);
+    margin-right: 5px;
+}
+.artistes .card-artiste .infos .heure::before{
+    content: url(../img/horloge.svg);
+    transform: translateY(10%);
+    margin-right: 5px;
+}
+
+.artistes .seeMore {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem; 
+    margin-bottom: 6rem;
+    position: relative;
+}
+
+.artistes .seeMore .buttonContainer {
+    position: relative;
+}
+
+.artistes .seeMore .buttonContainer a{
+    color: #fff;
+}
+.artistes .seeMore .buttonContainer a:hover{
+    color: #020307;
+}
+
+
+
+
+.contact{
+    display: flex;
+    padding-top: 7%;
+    padding-bottom: 5%;
+    padding-left: 5%;
+    padding-right: 10%;
+    background-color: #CC67F6;
+}
+.contact .contact-design{
+    flex: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.contact .contact-design img{
+    width: 40vw;
+}
+.contact .contact-form{
+    flex: 60%;
+    margin-left: 5%;
+}
+.contact .contact-form p{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.contact form {
+    /* Ajouter box-sizing */
+    box-sizing: border-box;
+    border-radius: 20px;
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 50px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    width: 100%;
+    /* redéfinition 400 + 2*20 */
+}
+
+.contact input[type=text],
+.contact textarea {
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 50px;
+    margin-bottom: 16px;
+    margin-right: 0px;
+    margin-left: 0px;
+    resize: vertical;
+    background-color: transparent;
+    color: white;
+    padding: 12px 20px;
+    padding-left: 0px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #fff;
+    border-radius: 0px;
+    cursor: pointer;
+}
+
+.contact input[type=submit]{
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+
+
+.contact label {
+    margin-right: 0px;
+    margin-left: 0px;
+    width: 100%;
+}
+
+.contact input::placeholder {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 200;
+    margin-left: -30px;
+}
+
+.contact label{
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact textarea {
+    background-color: transparent;
+    color: white;
+    padding: 12px 20px;
+    padding-left: 0px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0px;
+    cursor: pointer;
+}
+
+.contact textarea::placeholder {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 200;
+    margin-left: -30px;
+}
+
+footer{
+    background-color: #6F45FF;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+footer .informations{
+    display: flex;
+    align-items: center;
+    gap: 25%;
+    padding-top: 8%;
+    padding-bottom: 5%;
+}
+footer .informations .text{
+    flex: 20%;
+}
+footer .informations p{
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+footer .informations .logo{
+    width: 150px;
+}
+f
+footer .socials a {
+    margin: 0px 25px;
+}
+footer .socials #tiktok {
+    width: 12px;
+}
+footer .informations .newsletter{
+    flex: 20%;
+}
+footer .informations .newsletter input[type="text"]{
+    width: 90%;
+    height: 35px;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+    padding-left: 10px;
+}
+footer .informations .newsletter button{
+    cursor: pointer;
+    position: absolute;
+    margin-top: 2px;
+    margin-left: -37px;
+    width: 35px;
+    height: 35px;
+    background-color: #6F45FF;
+    border: none;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+footer .informations .newsletter button:hover{
+    background-color: #CC67F6;
+    transition: all 0.3s;
+}
+footer .informations .newsletter button img{
+    margin-top: 5px;
+    transform: scale(0.9);
+}
+
+footer .copyright p{
+    text-align: center;
+    padding: 10px;
+}
