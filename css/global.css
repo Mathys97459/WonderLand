@@ -163,7 +163,6 @@ body {
     display: none;
 }
 
-/* Media query pour les petits écrans */
 @media screen and (max-width: 1004px) {
     .nav {
         justify-content: center;
@@ -174,7 +173,7 @@ body {
     }
 
     .nav .nav-bottom {
-        background-color: red;
+        border-radius: 0px;
     }
 
     .nav>.nav-btn {
@@ -507,4 +506,17 @@ footer .copyright p {
     font-size: 0.8rem;
     text-align: center;
     padding: 10px;
+}
+
+
+@media (max-width: 568px) {
+    footer .informations {
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer .informations .newsletter {
+        margin-top: 4rem;
+        margin-bottom: 2rem;
+    }
 }

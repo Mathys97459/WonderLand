@@ -122,6 +122,7 @@ body{
     flex: 60%;
     margin-top: auto;
     margin-bottom: auto;
+    margin-left: 15px;
 
 }
 .artistes .card-artiste .infos .type{
@@ -271,4 +272,215 @@ body{
     font-size: 1rem;
     font-weight: 200;
     margin-left: -30px;
+}
+
+@media (max-width: 1300px) {
+    .banner .text{
+        margin-top: 14rem;
+    }
+}
+
+@media (max-width: 1000px) {
+    .banner {
+        flex-direction: column;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        align-items: center;
+    }
+    .banner .text {
+        margin-bottom: 0rem;
+        padding: 0;
+        text-align: center;
+    }
+    .banner .text img{
+        margin-left: auto;
+        margin-right: auto;
+        width: clamp(150px, 40%, 250px);
+    }
+    .banner .text .buttons{
+        margin-top: 2rem;
+    }
+    .banner .banner-design{
+        margin-top: 0rem;
+        padding-top: 2rem;
+        background: none;
+    }
+    .banner .banner-design img{
+        position: block;
+        transform: translateX(0%);
+    }
+
+
+
+    .stats{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    .stats div{
+        display: flex;
+        align-items: center;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        margin-left: 30%;
+    }
+    .stats div::before{
+        content: url(../img/star.svg);
+        transform: scale(0.6);
+    }
+    .stats div h1{
+        line-height: 2rem;
+        width: 100%;
+    }
+
+
+
+    .artistes{
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-top: 4rem;
+    }
+    .artistes .title{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 4rem;
+        text-align: center;
+    }
+    .artistes .title::before{
+        content: url(../img/star.svg);
+        position: absolute;
+        transform: scale(1);
+        z-index: -1;
+    }
+    .artistes .first-row, .artistes .second-row{
+        display: flex;
+        flex-direction: column;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+    .artistes .card-artiste{
+        display: flex;
+        margin-bottom: 6rem;
+    }
+    .artistes .seeMore {
+        margin-top: -2rem; 
+        margin-bottom: 4rem;
+    }
+
+
+
+    .contact{
+        display: flex;
+        flex-direction: column;
+        padding-top: 2%;
+        padding-bottom: 0%;
+        padding-left: 0%;
+        padding-right: 0%;
+        background-color: transparent;
+    }
+    .contact .contact-design{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: transparent;
+    }
+    .contact .contact-design img{
+        width: 50vw;
+    }
+    .contact .contact-form{
+        flex: 60%;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        padding-left: 12%;
+        padding-right: 12%;
+        margin: 0;
+        background-color: #CC67F6;
+    }
+    .contact .contact-form p{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .stats div{
+        margin-left: 25%;
+    }
+    .artistes .first-row, .artistes .second-row{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+@media (max-width: 668px) {
+    .stats div{
+        display: flex;
+        align-items: center;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        margin-left: 0%;
+        transform: translateX(-0%);
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 568px) {
+    .banner .text .buttons{
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+        align-items: center;
+    }
+    .banner .text .buttons .button1{
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+    .banner .banner-design img{
+        position: relative;
+        width: clamp(350px,35vw ,550px);
+        z-index: 0;
+        transform: translateX(0%);
+    }
+
+    .artistes .first-row, .artistes .second-row{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    
+    .artistes .card-artiste .img{
+        flex: 30%;
+        display: flex;
+        justify-content: center;
+    }
+    .artistes .card-artiste .img img{
+        width: 150px;
+    }
+}
+
+@media (max-width: 450px) {
+    .artistes .first-row, .artistes .second-row{
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+    .artistes .card-artiste .img{
+        flex: 25%;
+        display: flex;
+        justify-content: center;
+    }
+    .artistes .card-artiste .img img{
+        width: 125px;
+    }
+    .artistes .card-artiste{
+        padding-right: 10px;
+    }
+    .artistes .card-artiste .infos{
+        margin-left: 0;
+    }
 }
