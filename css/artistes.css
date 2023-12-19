@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'Stora';
+    src: url('../stora/Stora.ttf') format('truetype');
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
