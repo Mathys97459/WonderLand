@@ -460,19 +460,24 @@ body {
     margin-bottom: 8rem;
 }
 
-.apercu video{
+.apercu .design-video{
     display: flex;
-    width: 75%;
-    margin-top: 2rem;
-    margin-left: auto;
-    margin-right: auto;
     padding-top: 4rem;
     padding-bottom: 4rem;
+    align-items: center;
+}
+.apercu iframe{
+    display: flex;
+    width: 80%;
+    aspect-ratio: 16/9;
+    margin-left: auto;
+    margin-right: auto;
 }
 .apercu .design-video::before{
     content: url(../img/star_green.png);
     position: absolute;
-    right: 80px;
+    top: 0px;
+    right: 10px;
     transform: scale(0.8);
 }
 .apercu .design-video{
@@ -580,23 +585,24 @@ body {
     .apercu .design-video .rectangle{
         display: none;
     }
-    .apercu video{
+    .apercu iframe{
         width: 90%;
         margin-top: 2rem;
-        margin-left: auto;
+        display: flex;
         margin-right: auto;
+        margin-left: auto;
         padding-top: 0rem;
         padding-bottom: 0rem;
     }
     .apercu .design-video::before{
         content: url(../img/star_green.png);
         position: absolute;
-        top: -100px;
-        right: -20px;
+        top: 0px;
+        right: -50px;
         transform: scale(0.6);
         z-index: 2;
     }
-    .apercu .design-video video{
+    .apercu .design-video iframe{
         box-shadow: #83FFE2 -15px 15px 0px;
     }
 }
@@ -674,8 +680,8 @@ body {
     .apercu .design-video::before{
         content: url(../img/star_green.png);
         position: absolute;
-        top: -100px;
-        right: -70px;
+        top: 0px;
+        right: -75px;
         transform: scale(0.4);
         z-index: 2;
     }
