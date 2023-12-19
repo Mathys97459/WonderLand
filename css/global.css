@@ -240,10 +240,10 @@ body {
     .nav .logo-hamburger {
         position: absolute;
         display: block;
-        width: 11%;
+        width: 15%;
         margin-left: 50%;
         transform: translateX(-50%);
-        margin-top: 10px;
+        margin-top: 15px;
         z-index: 1002;
     }
 
@@ -510,6 +510,9 @@ footer .copyright p {
 
 
 @media (max-width: 568px) {
+    .nav .logo-hamburger {
+        width: 20%;
+    }
     footer .informations {
         display: flex;
         flex-direction: column;

@@ -1,7 +1,682 @@
+@import "https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css";
+
 @font-face {
     font-family: 'Stora';
     src: url('../stora/Stora.ttf') format('truetype');
 }
-body{
+
+body {
     font-family: 'Poppins', sans-serif;
+}
+
+.resume {
+    margin-top: 15rem;
+    margin-bottom: 5rem;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-bottom: 5rem;
+    position: relative;
+}
+
+.resume .rectangle {
+    position: absolute;
+    height: 100%;
+    width: 20%;
+    background-color: #83FFE2;
+    z-index: -1;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFACEE;
+}
+
+.title::before {
+    content: url(../img/star-purple.png);
+    margin-right: 2rem;
+}
+
+.resume .title {
+    font-size: clamp(36px, 3vw, 50px);
+    line-height: clamp(42px, 5vw, 70px);
+}
+
+.resume .content {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.resume .content .carrousel {
+    flex: 50%;
+    margin-left: 5rem;
+    height: 300px;
+}
+
+.resume .content .paragraphe {
+    flex: 50%;
+    text-align: left;
+    margin-left: 5rem;
+    line-height: 1.3rem;
+}
+
+/* carrousel */
+.carrousel,
+.carrousel * {
+    box-sizing: border-box;
+}
+
+.carrousel {
+    width: 100%;
+    font-size: 1rem;
+    height: 50%;
+    position: relative;
+    display: grid;
+    place-items: center;
+    grid-template-columns: max-content 1fr max-content;
+    grid-template-rows: max-content 1fr max-content;
+    grid-template-areas:
+        ". . f"
+        "l . r"
+        "p b c";
+    border-radius: 0;
+    color: white;
+}
+
+.carrousel:focus {
+    outline: 1px solid currentcolor;
+}
+
+.carrousel.full-view {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 999;
+    font-size: 1.5rem;
+    --object-fit: contain !important;
+    border-radius: 0;
+    display: none;
+}
+
+.carrousel.hide-controls .control {
+    opacity: 0;
+    pointer-events: 0;
+}
+
+.carrousel .slides {
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+    display: flex;
+    flex-grow: grow;
+    height: 100%;
+    overflow: hidden;
+    border-radius: inherit;
+}
+
+.carrousel>*:not(.slides) {
+    margin: 0.5em;
+}
+
+.carrousel .slides img {
+    --backgroundOverlay: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    background: #1d1e22;
+    object-fit: var(--object-fit, cover);
+    transition: margin-left 1s ease;
+    background-size: cover;
+    background-position: center center;
+}
+
+.carrousel .icon {
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.carrousel .arrow-left {
+    grid-area: l;
+    font-size: 1.5em;
+    display: none;
+}
+
+.carrousel .arrow-right {
+    grid-area: r;
+    font-size: 3rem;
+    transform: translate(110%, 50%);
+    color: #6F45FF;
+    background-color: #fff;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    align-items: center;
+}
+
+.carrousel .full-view-btn {
+    grid-area: f;
+    margin-left: 60px;
+    display: none;
+}
+
+.carrousel .auto-play-btn {
+    grid-area: p;
+    display: none;
+}
+
+.carrousel .controls-hide-btn {
+    grid-area: c;
+    display: none;
+}
+
+.carrousel .bullets {
+    grid-area: b;
+    display: flex;
+    gap: 1.5rem;
+    margin-left: 40px;
+    transform: scale(0.7) translate(150%, 250%);
+}
+
+/* for demo */
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 20em;
+    gap: 2em;
+    max-width: 1000px;
+    margin-inline: auto;
+}
+
+@media (min-width: 40rem) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.container>*:first-child {
+    grid-column: 1/-1;
+}
+
+.controls-info {
+    max-width: max-content;
+    display: grid;
+    text-align: left;
+    margin-inline: auto;
+    grid-template-columns: repeat(3, auto);
+}
+
+.controls-info * {
+    padding: 0.25em 0.5em;
+    align-self: center;
+}
+
+.controls-info .title {
+    border-bottom: 1px solid lightgray;
+    font-weight: 600;
+}
+
+.controls-info .icon {
+    display: flex;
+    justify-content: center;
+    border-inline: 1px dashed lightgray;
+}
+
+.controls-info .double {
+    grid-column: span 2;
+    border-left: 1px dashed lightgray;
+}
+
+
+
+.artistes {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.title2 {
+    display: flex;
+    text-align: left;
+    justify-content: left;
+    color: #fff;
+    align-items: center;
+}
+
+.title2::before {
+    content: url(../img/star.svg);
+    transform: scale(0.7);
+    margin-right: 0px;
+    color: #FFACEE;
+}
+
+
+
+
+
+
+/*CARROUSEL 2*/
+.link-plain,
+.link-plain:hover,
+.link-plain:active,
+.link-plain:visited {
+    text-decoration: none;
+}
+
+.link-plain-f,
+.link-plain-f:hover,
+.link-plain-f:active,
+.link-plain-f:focus,
+.link-plain-f:visited {
+    color: initial;
+    text-decoration: none !important;
+}
+
+#va_container {
+    position: relative;
+    max-width: 870px;
+    margin: auto;
+}
+
+.va-thumbnail {
+    border-radius: 5px;
+    border: 0px;
+    max-width: 100%;
+}
+
+
+.va-carrousel-flexbox {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+.va-carrousel-flexbox .va-card {
+    flex: 0 0 auto;
+    padding-left: 15px;
+    width: 200px;
+}
+
+.va-carrousel-flexbox .va-card:last-child {
+    margin-right: 15px;
+}
+
+.va-carrousel-flexbox .va-card:last-child::after {
+    content: ' ';
+    display: inline-block;
+}
+
+.va-card {
+    width: 100px;
+    cursor: pointer;
+    user-select: none;
+    outline: none;
+}
+
+.va-card:hover {
+    user-select: none;
+    outline: none;
+}
+
+.va-card a {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .va-card {
+        width: 130px;
+    }
+}
+
+.va-carrousel,
+.va-carrousel-flexbox {
+    -webkit-overflow-scrolling:initial;
+}
+
+.va-carrousel::-webkit-scrollbar,
+.va-carrousel-flexbox::-webkit-scrollbar {
+    background-color: transparent;
+    height: 4px;
+}
+  
+.va-carrousel-flexbox::-webkit-scrollbar-track {
+    background: #fff;
+    border-radius: 2px;
+    height: 6px;
+  }
+  
+  .va-carrousel-flexbox::-webkit-scrollbar-thumb {
+    
+    background-color: #6F45FF; /* color of the scroll thumb */
+    border-radius: 20px; /* roundness of the scroll thumb */
+  }
+
+.va-carrousel-title {
+    display: inline-block;
+
+    color: white;
+    font-weight: 700;
+    padding-bottom: 8px;
+
+    margin-bottom: 18px;
+}
+
+
+
+.va-points {
+    font-size: 12px;
+    font-weight: 700;
+    display: inline-block;
+    color: white;
+}
+
+.deals-paddle {
+    height: 38px;
+    width: 38px;
+    color: white;
+    background-color: #00000089;
+    border-radius: 50%;
+    border: 0px solid;
+    margin: auto;
+    position: absolute;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.deals-paddle:focus {
+    outline: none;
+}
+
+.deals-paddle:active {
+    border-style: solid;
+    outline: none;
+    user-select: none;
+}
+
+.deals-paddle svg {
+    width: 10px;
+}
+
+@media (min-width: 768px) {
+    .other-game-button {
+        width: 300px;
+    }
+}
+
+.deals-scroll-left {
+    top: 0;
+    left: 5px;
+    bottom: 0;
+}
+
+.deals-scroll-right {
+    top: 0;
+    bottom: 0;
+    right: 5px;
+}
+
+.va-carrousel-section {
+    padding: 0px;
+    position: relative;
+}
+
+@media (min-width: 768px) {
+
+    .va-carrousel-section {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+.va-whitewrap {
+    /*         background-color: white; */
+    padding-top: 15px;
+    margin-top: 15px;
+}
+
+.va-seeall {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    border-top: 1px solid #DDDDDD;
+    text-align: center;
+    padding: 10px;
+}
+
+
+
+
+.apercu{
+    margin-top: 6rem;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 8rem;
+}
+
+.apercu video{
+    display: flex;
+    width: 75%;
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+.apercu .design-video::before{
+    content: url(../img/star_green.png);
+    position: absolute;
+    right: 80px;
+    transform: scale(0.8);
+}
+.apercu .design-video{
+    position: relative;
+}
+.apercu .design-video .rectangle{
+    position: absolute;
+    height: 100%;
+    width: 20%;
+    background-color: #6F45FF;
+    z-index: -1;
+}
+
+
+.reserver{
+    display: flex;
+    background-color: #83FFE2;
+    align-items: center;
+    color: #1d1e22;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.reserver .design{
+    flex: 50%;
+}
+.reserver .design img{
+    width: 100%;
+    transform: translateY(-7%);
+}
+
+.reserver .content{
+    flex: 50%;
+    margin-left: 3rem;
+}
+.reserver .content p{
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+.reserver .content .button2{
+    border-color: #6F45FF;
+    color: #6F45FF;
+}
+.reserver .content .button2:hover{
+    border-color: #6F45FF;
+    background-color: #6F45FF;
+    color: #fff;
+}
+
+@media (max-width: 1000px){
+    .resume {
+        position:initial;
+        margin: 0;
+        margin-top: 15rem;
+    }
+    .resume .rectangle {
+        position: absolute;
+        height: 15%;
+        width: 100%;
+        margin: 0;
+        margin-top: 7rem;
+    }
+    
+    .title {
+        margin-bottom: 7rem;
+    }
+    .title::before {
+        content: url(../img/star-purple.png);
+        margin-right: 0rem;
+        position: absolute;
+        z-index: -1;
+        transform: scale(1.7);
+    }
+
+    .resume .content {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .resume .content .carrousel {
+        margin: 0;
+    }
+    .carrousel .bullets {
+        transform: scale(0.8) translate(25%, 200%);
+    }
+    .resume .content .paragraphe{
+        margin: 0;
+        margin-top: 6rem;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+
+    .apercu{
+        margin-top: 5rem;
+        margin-left: 8%;
+        margin-right: 8%;
+        margin-bottom: 8rem;
+    }
+    .apercu .design-video{
+        position: relative;
+    }
+    .apercu .design-video .rectangle{
+        display: none;
+    }
+    .apercu video{
+        width: 90%;
+        margin-top: 2rem;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 0rem;
+        padding-bottom: 0rem;
+    }
+    .apercu .design-video::before{
+        content: url(../img/star_green.png);
+        position: absolute;
+        top: -100px;
+        right: -20px;
+        transform: scale(0.6);
+        z-index: 2;
+    }
+    .apercu .design-video video{
+        box-shadow: #83FFE2 -15px 15px 0px;
+    }
+}
+
+
+@media (max-width: 768px){
+    .resume .title {
+        font-size: clamp(24px, 3vw, 40px);
+        line-height: clamp(42px, 5vw, 70px);
+    }
+
+
+    .reserver {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+    .reserver .design{
+        flex: 40%;
+    }
+    .reserver .design img{
+        width: 100%;
+        transform: translateX(0%);
+    }
+    
+    .reserver .content{
+        flex: 60%;
+        margin-left: 1rem;
+    }
+    .reserver .content p{
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 478px){
+    .carrousel .bullets {
+        transform: scale(0.7) translate(30%, 200%);
+    }
+
+    .reserver {
+        display: flex;
+        flex-direction: column;
+
+    }
+    .reserver .design{
+        display: flex;
+        flex: 40%;
+        justify-content: center;
+    }
+    .reserver .design img{
+        width: 60%;
+        transform: translateY(-40%);
+    }
+    .reserver .content{
+        transform: translateY(-20%);
+    }
+
+
+    .apercu{
+        margin-top: 5rem;
+        margin-left: 6%;
+        margin-right: 4%;
+        margin-bottom: 8rem;
+    }
+    .apercu video{
+        width: 100%;
+        margin-top: 2rem;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 0rem;
+        padding-bottom: 0rem;
+    }
+    .apercu .design-video::before{
+        content: url(../img/star_green.png);
+        position: absolute;
+        top: -100px;
+        right: -70px;
+        transform: scale(0.4);
+        z-index: 2;
+    }
 }

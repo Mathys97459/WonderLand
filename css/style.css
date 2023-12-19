@@ -114,6 +114,7 @@ body{
     flex: 40%;
     display: flex;
     justify-content: center;
+    justify-content: flex-start;
 }
 .artistes .card-artiste .img img{
     width: 200px;

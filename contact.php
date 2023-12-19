@@ -54,8 +54,8 @@
             <a href="artistes.php" class="link">ARTISTES</a>
             <a href="planning.html" class="link">PLANNING</a>
             <a href="index.html"><img class="logo" src="img/logo_mobile.png" alt="logo"></a>
-            <a href="a_propos.html" class="link active">A PROPOS</a>
-            <a href="contact.php" class="link">CONTACT</a>
+            <a href="a_propos.html" class="link">A PROPOS</a>
+            <a href="contact.php" class="link active">CONTACT</a>
             <a href="reserver.php" class="link" id="reserver">RÉSERVER</a>
         </div>
     </div>
