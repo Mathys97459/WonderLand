@@ -457,7 +457,7 @@ body {
     margin-top: 6rem;
     margin-left: 10%;
     margin-right: 10%;
-    margin-bottom: 8rem;
+    margin-bottom: 6rem;
 }
 
 .apercu .design-video{
@@ -465,30 +465,20 @@ body {
     padding-top: 4rem;
     padding-bottom: 4rem;
     align-items: center;
+    justify-content: center;
+    position: relative;
 }
-.apercu iframe{
-    display: flex;
-    width: 80%;
-    aspect-ratio: 16/9;
-    margin-left: auto;
-    margin-right: auto;
+
+.apercu .design-video video{
+    width: 90%;
+    height: 100%;
 }
-.apercu .design-video::before{
+.apercu .design-video::after{
     content: url(../img/star_green.png);
     position: absolute;
     top: 0px;
-    right: 10px;
-    transform: scale(0.8);
-}
-.apercu .design-video{
-    position: relative;
-}
-.apercu .design-video .rectangle{
-    position: absolute;
-    height: 100%;
-    width: 20%;
-    background-color: #6F45FF;
-    z-index: -1;
+    right: 0px;
+    transform: scale(0.8) translate(20%, -20%);
 }
 
 
@@ -594,12 +584,12 @@ body {
         padding-top: 0rem;
         padding-bottom: 0rem;
     }
-    .apercu .design-video::before{
+    .apercu .design-video::after{
         content: url(../img/star_green.png);
         position: absolute;
         top: 0px;
         right: -50px;
-        transform: scale(0.6);
+        transform: scale(0.6) translate(0%, -30%);
         z-index: 2;
     }
     .apercu .design-video iframe{
@@ -665,8 +655,8 @@ body {
 
     .apercu{
         margin-top: 5rem;
-        margin-left: 6%;
-        margin-right: 4%;
+        padding-left: 0%;
+        padding-right: 0%;
         margin-bottom: 8rem;
     }
     .apercu video{
@@ -677,12 +667,12 @@ body {
         padding-top: 0rem;
         padding-bottom: 0rem;
     }
-    .apercu .design-video::before{
+    .apercu .design-video::after{
         content: url(../img/star_green.png);
         position: absolute;
         top: 0px;
         right: -75px;
-        transform: scale(0.4);
+        transform: scale(0.4) translate(0%, -10%);
         z-index: 2;
     }
 }

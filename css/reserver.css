@@ -29,16 +29,17 @@ body{
 .reservation .title h1::after{
     content: url(../img/soulign3.png);
     position: absolute;
-    transform: scale(0.6) translate(-130%, -10%);
+    transform: scale(0.6) translate(-100%, -20%);
 }
 
 .selectors{
     display: flex;
-    gap: 10%;
+    gap: 0%;
 }
 
 .selectors .places{
-    flex: 60%;
+    flex: 70%;
+    padding-right: 10%;
 }
 .selectors .places h2, .selectors .date h2{
     font-size: 2rem;
@@ -49,7 +50,9 @@ body{
     align-items: center;
 }
 .selectors .places .personne .description{
-    flex: 60%;
+    flex: 50%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 .selectors .places .personne .description h3{
     font-family: 'Poppins', sans-serif;
@@ -60,15 +63,15 @@ body{
     font-family: 'Poppins', sans-serif;
     font-weight: 100;
     font-size: 2rem;
-    margin-bottom: 1.5rem;
+    
 }
 
 .selectors .places .personne .selector{
-    flex: 40%;
+    flex: 50%;
 }
 
 .selectors .date{
-    flex: 40%;
+    flex: 30%;
 }
 
 .selector input[type="number"]{
@@ -106,10 +109,10 @@ body{
     margin-top: 1rem;
 }
 .promo h4{
-    flex: 60%;
+    flex: 50%;
 }
 .promo input{
-    flex: 40%;
+    flex: 50%;
 }
 .promo h4{
     font-family: 'Poppins', sans-serif;
@@ -119,19 +122,69 @@ body{
 }
 .promo input{
     background-color: #161616;
-    text-align: center;
-    border: none;
-    height: 70px;
-    margin: 0;
+    height: 60px;
     color: #fff;
     text-transform: uppercase;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    margin-left: 10px;
+    padding-left: 10px;
+    border: none;
 }
 .promo input::placeholder{
     text-transform: none;
 }
+.date form label {
+    display: flex;
+    font-size: 1.5rem;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+.date form{
+    margin-top: 1.5rem;
+}
 
-hr{
+.date form .button1{
+    cursor: pointer;
+    padding: 12px 20px;
+    background-color: #FFACEE;
+    border-color: #FFACEE;
+}
+.date form .button1:hover{
+    background-color: #6F45FF;
+    border-color: #6F45FF;
+    color: white;
+}
+
+.date form label input[type="checkbox"]{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -border-radius: 4px;
+    height: 25px;
+    width: 25px;
+    background: #fff;
+    border: 1px solid #ccc;
+    background-color: #161616;
+}
+.date form label input[type="checkbox"]:checked{
+    background-color: #6F45FF;
+    position: relative;
+}
+.date form label input[type="checkbox"]:checked::after{
+    content: "";
+    font-family: FontAwesome;
+    content: '\f00c';
+    position: absolute;
+    display: block;
+    font-size: 1.4rem;
+    margin-left: 1.5px;
+    color: #fff;
+}
+
+
+
+.reservation hr{
     margin-top: 3rem;
     margin-bottom: 2rem;
 }
@@ -152,7 +205,7 @@ hr{
     font-size: 1.3rem;
 }
 #nbJours::after{
-    content: " jours";
+    content: " jour(s)";
     color: #FFACEE;
     font-size: 1.3rem;
 }
@@ -190,4 +243,111 @@ hr{
     display: flex;
     margin-top: 2rem;
     justify-content: center;
+}
+
+
+@media (max-width: 1000px){
+    .reservation .title h1{
+        text-align: center;
+    }
+    .reservation .title h1::after{
+        content: url(../img/soulign3.png);
+        position: absolute;
+        transform: scale(0.7) translate(-100%, -20%);
+    }
+}
+
+
+@media (max-width: 830px){
+    .selectors{
+        margin-left: 7%;
+        margin-right: 7%;
+    }
+    .selectors .places {
+        flex: 50%;
+        padding-right: 0%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .selectors .date {
+        display: flex;
+        flex: 50%;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+    }
+    .selectors .places .personne{
+        display: flex;
+        flex-direction: column;
+        align-items:flex-start;
+        margin-bottom: 2rem;
+    }
+    .promo {
+        display: flex;
+        align-items: flex-start;
+        margin-top: 1rem;
+        flex-direction: column;
+    }
+    .promo input {
+        background-color: #161616;
+        padding: 10px 0px;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        margin-top: 10px;
+        margin-left: 0px;
+        padding-left: 10px;
+        border: none;
+    }
+}
+
+@media (max-width: 650px){
+    .selectors{
+        flex-direction: column;
+    }
+    .selectors .places {
+        flex: 100%;
+        align-items: center;
+    }.selectors .places .personne{
+        align-items: center;
+    }
+    .selectors .places .personne .description {
+        text-align: center;
+    }
+    .selectors .date {
+        flex: 100%;
+        align-items: center;
+        margin-top: 6rem;
+        margin-bottom: 6rem;
+    }
+}
+
+@media (max-width: 650px){
+    .reservation{
+        margin-top: 10rem;
+    }
+    .reservation .title h1{
+        font-size: clamp(32px, 7vw, 40px);
+        line-height: clamp(42px, 5vw, 70px);
+        text-align: center;
+        margin-bottom: 6rem;
+    }
+    .reservation .title h1::after{
+        content: url(../img/soulign3.png);
+        position: absolute;
+        transform: scale(0.5) translate(-125%, -50%);
+    }
+
+    .reservation hr{
+        margin: 0;
+        margin-bottom: 2rem;
+    }
+
+    .resume{
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
 }

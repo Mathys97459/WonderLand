@@ -15,6 +15,9 @@
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/a_propos.css">
 
+    //API Youtube
+    <script src="https://apis.google.com/js/api.js"></script>
+
     <title>WonderLand - À Propos</title>
 </head>
 
@@ -185,10 +188,12 @@
         <div class="title2">
             <h1>APERCU DU<br>CONCERT</h1>
         </div>
-        <div class="design-video">
-            <div class="rectangle"></div>
-            <iframe id="video" src="https://www.youtube.com/watch?v=v-HZ6l0Z2f0"></iframe>
-        </div>
+        <div class="design-video" id="player">
+            <video id="myVideo" controls autoplay>
+                <source src="img/festival.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas la lecture de vidéos au format MP4.
+            </video>
+    </div>
     </div>
 
     <div class="reserver">
@@ -239,6 +244,7 @@
             <p>&copy Copyright 2023 .Wonderland. All Right Reserved.</p>
         </div>
     </footer>
+    <script src="https://www.youtube.com/iframe_api"></script>
     <script src="js/script.js"></script>
 </body>
 

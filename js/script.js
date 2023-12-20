@@ -208,5 +208,3 @@ class Carrousel {
   }
   // Initiate the container with ID
   initDealCarrousel('va_container'); //carrousel ID
-
-

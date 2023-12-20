@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/logo_favicon.png">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -88,7 +90,7 @@
                     </div>
                     <div class="selector">
                         <button onclick="moins1()">-</button>
-                        <input type="number" id="quantity1" name="quantity" min="0" max="100" value="0">
+                        <input type="number" id="quantity1" name="quantity" min="0" max="100" value="1">
                         <button onclick="plus1()">+</button>
                     </div>
                 </div>
@@ -105,13 +107,12 @@
                 </div>
                 <div class="promo">
                     <h4>Entrez Un Code Promo</h4>
-                    <h5 id="codePromoValid"></h5>
                     <input type="text" id="codePromo" placeholder="Entrez Un Code">
                 </div>
             </div>
 
             <div class="date">
-                <h2>Vos Date</h2>
+                <h2>Vos Dates</h2>
                 <form id="daysForm">
                     <label>
                         <input type="checkbox" name="day" value="1" checked> 1 juillet 2024
@@ -122,7 +123,7 @@
                     <label>
                         <input type="checkbox" name="day" value="3"> 3 juillet 2024
                     </label><br>
-                    <button type="button" onclick="getSelectedDays()">Valider</button>
+                    <button class="button1" type="button" onclick="getSelectedDays()">VALIDER LES DATES</button>
                 </form>
 
             </div>
@@ -134,7 +135,7 @@
             <div class="details">
                 <div class="detail">
                     <p class="libelle" id="libelleAdulte"></p>
-                    <p class="prix" id="prixAdulte">0</p>
+                    <p class="prix" id="prixAdulte">24</p>
                 </div>
                 <div class="detail">
                     <p class="libelle" id="libelleEnfant"></p>
@@ -146,15 +147,15 @@
                 </div>
                 <div class="detail">
                     <p class="libelle">TVA (5.5%)</p>
-                    <p class="prix" id="prixTVA">0</p>
+                    <p class="prix" id="prixTVA">1.32</p>
                 </div>
             </div>
             <div class="total">
                 <div class="prix">
                     <h4>Total</h4>
-                    <p id="totalPrice">0</p>
+                    <p id="totalPrice">25.32</p>
                 </div>
-                <a class="button2" href="">RESERVER</a>
+                <a class="button2" href="#">RESERVER</a>
             </div>
         </div>
     </div>
@@ -270,7 +271,7 @@
             <p>&copy Copyright 2023 .Wonderland. All Right Reserved.</p>
         </div>
     </footer>
-    <script src="js/script.js"></script>
+    
 </body>
 
 </html>
