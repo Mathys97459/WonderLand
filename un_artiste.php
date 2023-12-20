@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/un_artiste.css">
 
-    <title>WonderLand - Accueil</title>
+    <title>WonderLand - Artiste</title>
 </head>
 
 <body>

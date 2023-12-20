@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/reserver.css">
 
-    <title>WonderLand - Accueil</title>
+    <title>WonderLand - Réserver</title>
 </head>
 
 <body>
