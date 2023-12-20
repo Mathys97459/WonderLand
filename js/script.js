@@ -175,36 +175,52 @@ class Carrousel {
   }
 
 
+  function initAllDealCarrousels() {
+    var dealCarrouselButtons = document.querySelectorAll('.deals-scroll-left, .deals-scroll-right');
+    dealCarrouselButtons.forEach(function (button) {
+        button.addEventListener('click', function () {
+            var container = button.parentNode.querySelector('.va-carrousel-flexbox');
+            var cardWidth = container.querySelector('.va-card').offsetWidth;
+            var maxScroll = (container.querySelectorAll('.va-card').length * cardWidth) - container.clientWidth;
 
-  function initDealCarrousel(dealCarrouselID) {
-      var target = document.querySelector("#" + dealCarrouselID + " .va-carrousel-flexbox");
-      var cardOutterWidth;
-      var maxCarrouselScroll;
+            if (button.classList.contains('deals-scroll-left')) {
+                if (container.scrollLeft > 0) {
+                    scrollLeftAnimate(container, -cardWidth);
+                }
+            } else if (button.classList.contains('deals-scroll-right')) {
+                if (container.scrollLeft < maxScroll) {
+                    scrollLeftAnimate(container, cardWidth);
+                }
+            }
+        });
+    });
+}
 
-      function updateUpaCarrouselInfo() {
-          cardOutterWidth = document.querySelector("#" + dealCarrouselID + " .va-card").offsetWidth; //you can define how far the scroll
-          maxCarrouselScroll = (document.querySelectorAll("#" + dealCarrouselID + " .va-card").length *
-                  cardOutterWidth) - document.querySelector("#" + dealCarrouselID + " .va-carrousel-flexbox")
-              .clientWidth;
-      }
+function initAllCarousels() {
+    var carouselContainers = document.querySelectorAll('.va-carrousel-flexbox');
+    carouselContainers.forEach(function (container) {
+        var scrollLeftButton = container.parentNode.querySelector('.deals-scroll-left');
+        var scrollRightButton = container.parentNode.querySelector('.deals-scroll-right');
 
-      document.querySelector("#" + dealCarrouselID + " .deals-scroll-left").addEventListener("click",
-          function () {
-              updateUpaCarrouselInfo(); //in case window resized, will get new info
-              if (target.scrollLeft > 0) {
-                  scrollLeftAnimate(target, -cardOutterWidth * 2);
-              }
-          }
-      );
+        scrollLeftButton.addEventListener('click', function () {
+            var cardWidth = container.querySelector('.va-card').offsetWidth;
+            var maxScroll = (container.querySelectorAll('.va-card').length * cardWidth) - container.clientWidth;
 
-      document.querySelector("#" + dealCarrouselID + " .deals-scroll-right").addEventListener("click",
-          function () {
-              updateUpaCarrouselInfo(); //in case window resized, will get new info 
-              if (target.scrollLeft < maxCarrouselScroll) {
-                  scrollLeftAnimate(target, cardOutterWidth * 2);
-              }
-          }
-      );
-  }
-  // Initiate the container with ID
-  initDealCarrousel('va_container'); //carrousel ID
+            if (container.scrollLeft > 0) {
+                scrollLeftAnimate(container, -cardWidth);
+            }
+        });
+
+        scrollRightButton.addEventListener('click', function () {
+            var cardWidth = container.querySelector('.va-card').offsetWidth;
+            var maxScroll = (container.querySelectorAll('.va-card').length * cardWidth) - container.clientWidth;
+
+            if (container.scrollLeft < maxScroll) {
+                scrollLeftAnimate(container, cardWidth);
+            }
+        });
+    });
+}
+
+initAllDealCarrousels();
+initAllCarousels();
