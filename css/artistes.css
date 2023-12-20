@@ -5,3 +5,170 @@
 body{
     font-family: 'Poppins', sans-serif;
 }
+
+.banner-top{
+    margin-top: 13rem;
+    margin-left: 3%;
+    margin-right: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    text-align: center;
+}
+.banner-top h1{
+    font-size: clamp(42px, 4vw, 60px);
+    line-height: clamp(42px, 5vw, 70px);
+    position: relative;
+}
+.banner-top h1::before{
+    content: url("../img/star_green2.png");
+    margin-right: -50px;
+}
+.banner-top h1::after{
+    content: url("../img/entoure.png");
+    position: absolute;
+    transform: scale(0.8) translate(-110%, -30%);
+    z-index: -1;
+}
+
+.banner-top input[type="text"] {
+    width: 300px;
+    height: 45px;
+    border: 2px solid #fff;
+    border-radius: 0px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    padding-left: 10px;
+    background-color: transparent;
+    
+    margin-bottom: 2rem;
+}
+
+
+
+.grid-artistes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px;
+  }
+
+  @media screen and (max-width: 1200px) {
+    .grid-artistes {
+      grid-template-columns: repeat(3, 1fr);
+      max-width: 900px;
+    }
+    
+  }
+
+  @media screen and (max-width: 768px) {
+    .grid-artistes {
+      grid-template-columns: repeat(2, 1fr); 
+      max-width: 650px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .grid-artistes {
+      grid-template-columns: repeat(1, 1fr); /* 1 élément sur mobile */
+    }
+  }
+
+  /* Styles pour les éléments (à adapter selon vos besoins) */
+.artiste{
+    background-color: #CC67F6;
+    padding: 15px;
+    border-radius: 7px;
+}
+.artiste .infos img{
+    width: 100%;
+    border-radius: 7px;
+    margin-bottom: 15px;
+}
+.artiste .infos h2{
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+.artiste .infos h2::after{
+    content: url(../img/certification.png);
+    margin-top: 4px;
+    margin-left: 8px;
+}
+
+.artiste .infos p{
+    display: flex;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    color: #cdcdcd;
+    font-size: 1.2rem;
+}
+.artiste .infos p::before{
+    content: url(../img/note-music.png);
+    margin-right: 5px;
+}
+
+.artiste .actions{
+    display: flex;
+    font-size: 0.7rem;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    justify-content: space-between;
+}
+.artiste .actions a{
+    display: flex;
+    color: #fff;
+}
+.artiste .actions a:hover{
+    color: #cdcdcd;
+}
+.artiste .actions #play::before{
+    content: url(../img/play.svg);
+    margin-right: 5px;
+}
+.artiste .actions #horloge::before{
+    content: url(../img/horloge.png);
+    margin-right: 5px;
+}
+.artiste .actions #partager::before{
+    content: url(../img/partager.png);
+    margin-right: 5px;
+}
+
+#noResult{
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 8rem;
+}
+
+@media (max-width: 500px){
+    .banner-top h1{
+        font-size: clamp(34px, 3vw, 50px);
+        line-height: clamp(42px, 5vw, 70px);
+        position: relative;
+    }
+    .banner-top h1::before{
+        content: url("../img/star_green2.png");
+        margin-right: 0px;
+        position: absolute;
+        transform: scale(0.7) translate(-70%, -50%);
+        z-index: -1;
+    }
+    .banner-top h1::after{
+        content: url("../img/entoure.png");
+        position: absolute;
+        transform: scale(0.6) translate(-130%, -70%);
+        z-index: -1;
+    }
+
+    .banner-top input[type="text"] {
+        width: 250px;
+    }
+}
