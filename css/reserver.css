@@ -5,3 +5,189 @@
 body{
     font-family: 'Poppins', sans-serif;
 }
+
+.highlightRose {
+    color: #FFACEE;
+}
+
+.highlightViolet {
+    color: #6F45FF;
+}
+
+.reservation{
+    margin-top: 12rem;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.reservation .title h1{
+    font-size: clamp(42px, 5vw, 70px);
+    line-height: clamp(42px, 5vw, 70px);
+    position: relative;
+    margin-bottom: 8rem;
+}
+.reservation .title h1::after{
+    content: url(../img/soulign3.png);
+    position: absolute;
+    transform: scale(0.6) translate(-130%, -10%);
+}
+
+.selectors{
+    display: flex;
+    gap: 10%;
+}
+
+.selectors .places{
+    flex: 60%;
+}
+.selectors .places h2, .selectors .date h2{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+.selectors .places .personne{
+    display: flex;
+    align-items: center;
+}
+.selectors .places .personne .description{
+    flex: 60%;
+}
+.selectors .places .personne .description h3{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+.selectors .places .personne .description p{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.selectors .places .personne .selector{
+    flex: 40%;
+}
+
+.selectors .date{
+    flex: 40%;
+}
+
+.selector input[type="number"]{
+    background-color: #161616;
+    border: none;
+    height: 70px;
+    width: 70px;
+    text-align: center;
+    color: #fff;
+    font-size: 1.1rem;
+    border-left: 2px solid rgb(55, 55, 55);
+    border-right: 2px solid rgb(55, 55, 55);
+    margin-left: -4px;
+    margin-right: -4px;
+}
+.selector input[type="number"]::-webkit-inner-spin-button{
+    display: none;
+}
+
+.selector button{
+    cursor: pointer;
+    background-color: #161616;
+    border: none;
+    height: 70px;
+    width: 45px;
+    margin: 0;
+    color: rgb(162, 162, 162);
+    font-size: 1.1rem;
+}
+
+
+.promo{
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+.promo h4{
+    flex: 60%;
+}
+.promo input{
+    flex: 40%;
+}
+.promo h4{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: #FFACEE;
+}
+.promo input{
+    background-color: #161616;
+    text-align: center;
+    border: none;
+    height: 70px;
+    margin: 0;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+}
+.promo input::placeholder{
+    text-transform: none;
+}
+
+hr{
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+.resume{
+    display: flex;
+}
+.resume .details{
+    flex: 50%;
+    margin-left: 3%;
+    margin-right: 4%;
+}
+.resume .details .detail{
+    display: flex;
+    justify-content: space-between;
+}
+.resume .details .detail .prix, #nbJours{
+    color: #FFACEE;
+    font-size: 1.3rem;
+}
+#nbJours::after{
+    content: " jours";
+    color: #FFACEE;
+    font-size: 1.3rem;
+}
+.resume .details .detail .prix::after{
+    content: ' €';
+    color: #FFACEE;
+    font-size: 1.3rem;
+}
+
+
+.resume .total{
+    flex: 50%;
+    margin-left: 3%;
+    margin-right: 4%;
+    margin-bottom: 5rem;
+}
+.resume .total .prix{
+    display: flex;
+    justify-content: space-between;
+}
+.resume .total .prix h4{
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+.resume .total #totalPrice{
+    color: #FFACEE;
+    font-size: 1.5rem;
+}
+.resume .total #totalPrice::after{
+    content: ' €';
+    color: #FFACEE;
+    font-size: 1.5rem;
+}
+.resume .total .button2{
+    display: flex;
+    margin-top: 2rem;
+    justify-content: center;
+}
