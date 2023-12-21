@@ -84,9 +84,18 @@ body{
 
   /* Styles pour les éléments (à adapter selon vos besoins) */
 .artiste{
+    cursor: pointer;
     background-color: #CC67F6;
     padding: 15px;
     border-radius: 7px;
+    transition: all 0.3s;
+}
+.artiste:hover{
+    cursor: pointer;
+    background-color: #6F45FF;
+    padding: 15px;
+    border-radius: 7px;
+    transition: all 0.3s;
 }
 .artiste .infos img{
     width: 100%;

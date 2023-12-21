@@ -41,9 +41,9 @@
     
     <div class="top">
         <div class="content">
-            <h1 class="title">Bruno<br>Mars</h1>
+            <h1 class="title">Bruno Mars</h1>
             <h2 class="genre">POP - electro</h2>
-            <p>Lorem Ipsum Description a faire redaction web je vous en conjure je prie de tout mon être pour que quelqu’un
+            <p class="resume">Lorem Ipsum Description a faire redaction web je vous en conjure je prie de tout mon être pour que quelqu’un
                 le fasse parceque j’ai pas le temps .</p>
         </div>
         <div class="image-mobile">
@@ -54,25 +54,57 @@
 
     <div class="container-audio">
         <div class="name">
-            <p>La musique - l'artiste</p>
+            <p class="titreMusique">La musique - l'artiste</p>
         </div>
         <div class="lecteur">
             <audio id="audio1" controls>
-                <source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/9473/new_year_dubstep_minimix.ogg"
+                <source class="urlAudio" src=""
                     type="audio/ogg">
                 Your browser dose not Support the audio Tag
             </audio>
         </div>
         <div class="video-container">
-            <video id="myVideo" controls autoplay>
-                <source src="img/festival.mp4" type="video/mp4">
+            <video id="myVideo" controls autoplay muted>
+                <source class="urlVideo" src="">
                 Votre navigateur ne supporte pas la lecture de vidéos au format MP4.
             </video>
         </div>
     </div>
 
-    <img id="artisteImg" src="img/artiste/bruno-mars.png" alt="bruno-mars">
+    <img id="artisteImg" class="urlImage" src="">
     
+
+    <script>
+        //Données récupérées de la page artistes
+        const nom_artiste = localStorage.getItem('nom_artiste');
+        const genre_artiste = localStorage.getItem('genre_artiste');
+        const resume_artiste = localStorage.getItem('resume_artiste');
+        const img_artiste = localStorage.getItem('img_artiste');
+        const titre_mp3_artiste = localStorage.getItem('titre_mp3_artiste');
+        const url_mp3_artiste = localStorage.getItem('mp3_artiste');
+        const url_video_artiste = localStorage.getItem('clip_artiste');
+
+        console.log(nom_artiste, genre_artiste, resume_artiste,img_artiste, titre_mp3_artiste, url_mp3_artiste, url_video_artiste);
+        //Balises stockées de la page un_artiste
+        const nom = document.querySelector('.title')
+        const genre = document.querySelector('.genre')
+        const resume = document.querySelector('.resume')
+        const titreMp3 = document.querySelector('.titreMusique')
+        const urlMp3 = document.querySelector('.urlAudio')
+        const urlVideo = document.querySelector('.urlVideo')
+        const urlImg = document.querySelector('.urlImage')
+        const imgMobile = document.querySelector('.image-mobile')
+
+        //Modification des informations
+        nom.textContent = nom_artiste
+        genre.textContent = genre_artiste
+        resume.textContent = resume_artiste
+        titreMp3.textContent = titre_mp3_artiste
+        urlMp3.src = url_mp3_artiste
+        urlVideo.src = url_video_artiste
+        urlImg.src = img_artiste
+        console.log(urlMp3.src, urlVideo.src, urlImg.src)
+    </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/audio.js"></script>

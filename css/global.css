@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Stora';
-    src: url('stora/Stora.ttf') format('truetype');
+    src: url('../stora/Stora.ttf') format('truetype');
 }
 
 * {
@@ -458,7 +458,7 @@ footer .informations .logo {
     width: 150px;
 }
 
-f footer .socials a {
+footer .socials a {
     margin: 0px 25px;
 }
 
@@ -470,7 +470,7 @@ footer .informations .newsletter {
     flex: 20%;
 }
 
-footer .informations .newsletter input[type="text"] {
+footer .informations .newsletter form input[type="mail"] {
     width: 90%;
     height: 35px;
     border: 2px solid #fff;
