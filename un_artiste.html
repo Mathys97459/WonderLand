@@ -47,7 +47,7 @@
                 le fasse parceque j’ai pas le temps .</p>
         </div>
         <div class="image-mobile">
-            <img src="img/assets-planning/bruno-mars.png" alt="">
+            <img class="srcImageMobile" src="img/assets-planning/bruno-mars.png" alt="">
         </div>
     </div>
     
@@ -64,7 +64,7 @@
             </audio>
         </div>
         <div class="video-container">
-            <video id="myVideo" controls autoplay muted>
+            <video id="myVideo" controls muted>
                 <source class="urlVideo" src="">
                 Votre navigateur ne supporte pas la lecture de vidéos au format MP4.
             </video>
@@ -83,6 +83,7 @@
         const titre_mp3_artiste = localStorage.getItem('titre_mp3_artiste');
         const url_mp3_artiste = localStorage.getItem('mp3_artiste');
         const url_video_artiste = localStorage.getItem('clip_artiste');
+        const img_artiste_mobile = localStorage.getItem('img_artiste_mobile');
 
         console.log(nom_artiste, genre_artiste, resume_artiste,img_artiste, titre_mp3_artiste, url_mp3_artiste, url_video_artiste);
         //Balises stockées de la page un_artiste
@@ -93,7 +94,7 @@
         const urlMp3 = document.querySelector('.urlAudio')
         const urlVideo = document.querySelector('.urlVideo')
         const urlImg = document.querySelector('.urlImage')
-        const imgMobile = document.querySelector('.image-mobile')
+        const imgMobile = document.querySelector('.srcImageMobile')
 
         //Modification des informations
         nom.textContent = nom_artiste
@@ -103,7 +104,19 @@
         urlMp3.src = url_mp3_artiste
         urlVideo.src = url_video_artiste
         urlImg.src = img_artiste
-        console.log(urlMp3.src, urlVideo.src, urlImg.src)
+        imgMobile.src = img_artiste_mobile
+
+        window.addEventListener('DOMContentLoaded', (event) => {
+    // Code à exécuter après le chargement de la page
+    const urlVideo = document.querySelector('.urlVideo');
+
+    // Démarrer la vidéo une fois que la page est chargée
+    window.onload = function() {
+        const myVideo = document.getElementById('myVideo');
+        myVideo.src = urlVideo.src;
+        myVideo.play();
+    };
+});
     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
