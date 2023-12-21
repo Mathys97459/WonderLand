@@ -7,9 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/logo_favicon.png">
 
+    <!--plyr-->
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css">
+<script src="https://cdn.plyr.io/3.6.4/plyr.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/un_artiste.css">
@@ -18,86 +27,55 @@
 </head>
 
 <body>
-    <div class="nav">
-        <input type="checkbox" id="nav-check">
-        <div class="nav-top">
-            <div class="contactInfos">
-                <div class="info">
-                    <img src="img/mail-fill.svg" alt="ws">
-                    <p>nom-festival.com</p>
-                </div>
-                <div class="info">
-                    <img src="img/phone-fill.svg" alt="tel">
-                    <p>01 02 03 04 05</p>
-                </div>
-            </div>
+    <div class="rectangleLeft"></div>
+    <div class="rectangleRight"></div>
 
-            <div class="socials">
-                <a href=""><img src="img/instagram-fill.svg" alt="instagram"></a>
-                <a href=""><img src="img/facebook-fill.svg" alt="facebook"></a>
-                <a href=""><img src="img/twitter-fill.svg" alt="twitter"></a>
-                <a href="" id="tiktok-link"><img id="tiktok" src="img/tiktok-fill.svg" alt="tiktok"></a>
-            </div>
+    <div class="navbarArtist">
+        <a class="buttonRetour" href="artistes.html"><i class="fa-solid fa-arrow-left-long"></i> Retour</a>
+        <div class="socials-networks">
+            <a href="#"><img src="img/socials/spotify.png" alt="spotify"></a>
+            <a href="#"><img src="img/socials/apple-music.png" alt="apple-music"></a>
+            <a href="#"><img src="img/socials/youtube.png" alt="youtube"></a>
         </div>
-        <div class="nav-btn">
-            <label for="nav-check">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
+    </div>
+    
+    <div class="top">
+        <div class="content">
+            <h1 class="title">Bruno<br>Mars</h1>
+            <h2 class="genre">POP - electro</h2>
+            <p>Lorem Ipsum Description a faire redaction web je vous en conjure je prie de tout mon être pour que quelqu’un
+                le fasse parceque j’ai pas le temps .</p>
         </div>
-        <a href="index.html"><img class="logo-hamburger" src="img/logo_mobile.png" alt="logo"></a>
-        <a href="reserver.html"><svg class="icon-reserver" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16"> <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/> </svg></a>
+        <div class="image-mobile">
+            <img src="img/assets-planning/bruno-mars.png" alt="">
+        </div>
+    </div>
+    
 
-        <div class="nav-bottom">
-            <a href="index.html" class="link">ACCUEIL</a>
-            <a href="artistes.html" class="link active">ARTISTES</a>
-            <a href="planning.html" class="link">PLANNING</a>
-            <a href="index.html"><img class="logo" src="img/logo_mobile.png" alt="logo"></a>
-            <a href="a_propos.html" class="link">A PROPOS</a>
-            <a href="contact.html" class="link">CONTACT</a>
-            <a href="reserver.html" class="link" id="reserver">RÉSERVER</a>
+    <div class="container-audio">
+        <div class="name">
+            <p>La musique - l'artiste</p>
+        </div>
+        <div class="lecteur">
+            <audio id="audio1" controls>
+                <source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/9473/new_year_dubstep_minimix.ogg"
+                    type="audio/ogg">
+                Your browser dose not Support the audio Tag
+            </audio>
+        </div>
+        <div class="video-container">
+            <video id="myVideo" controls autoplay>
+                <source src="img/festival.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas la lecture de vidéos au format MP4.
+            </video>
         </div>
     </div>
 
-
-
-
-
-
-
-    <footer>
-        <div class="informations">
-            <div class="text">
-                <img class="logo" src="img/logo.png" alt="">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae, nullam lobortis enim.</p>
-                <div class="socials">
-                    <a href=""><img src="img/instagram-fill.svg" alt="instagram"></a>
-                    <hr>
-                    <a href=""><img src="img/facebook-fill.svg" alt="facebook"></a>
-                    <hr>
-                    <a href=""><img src="img/twitter-fill.svg" alt="twitter"></a>
-                    <hr>
-                    <a href="" id="tiktok-link"><img id="tiktok" src="img/tiktok-fill.svg" alt="tiktok"></a>
-                </div>
-            </div>
-            <div class="newsletter">
-                <h2>NEWSLETTER</h2>
-                <p>Inscrivez-vous à notre newsletter et bénéficiez de tous nos avantages !</p>
-                <form action="#">
-                    <input type="text" name="mail" placeholder="Votre adresse mail...">
-                    <button type="submit">
-                        <img src="img/send.svg" alt="envoyer">
-                    </button>
-                </form>
-            </div>
-        </div>
-        <div class="copyright">
-            <hr>
-            <p>&copy Copyright 2023 .Wonderland. All Right Reserved.</p>
-        </div>
-    </footer>
+    <img id="artisteImg" src="img/artiste/bruno-mars.png" alt="bruno-mars">
     
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/audio.js"></script>
 </body>
 
 </html>
