@@ -75,6 +75,7 @@ body{
     justify-content: space-between;
     align-items: center;
     gap: 3rem;
+    
 }
 .top .image-mobile{
     margin-top: 7rem;
@@ -83,7 +84,7 @@ body{
 }
 .content{
     width: 33%;
-    margin-top: 15vh;
+    margin-top: 8rem;
     margin-left: 5%;
 }
 .content .title{
@@ -111,7 +112,8 @@ body{
     border-radius: 0px;
     background-color: #CC67F6;
     color: #fff;
-    margin-top: 20vh;
+    margin-top: 8rem;
+    padding-bottom: 2rem;
 }
 
 .container-audio .name {
@@ -180,7 +182,7 @@ color:rgba(0, 0, 0, .1);
 
 #artisteImg{
     position: absolute;
-    bottom: -5px;
+    bottom: 0;
     right: 0;
    height: 100%;
    z-index: -1;
@@ -232,8 +234,9 @@ color:rgba(0, 0, 0, .1);
         margin: 0;
         margin-left: 5%;
         margin-right: 5%;
+        margin-top: 7rem;
+        margin-bottom: 7rem;
         text-align: center;
-        margin-bottom: 5rem;
     }
     .top .image-mobile{
         margin-top: 7rem;
@@ -250,7 +253,8 @@ color:rgba(0, 0, 0, .1);
     .content{
         width: 100%;
         flex: 100%;
-        margin-top: 15vh;
+        margin: 0;
+        
     }
     .content .genre{
         font-size: 2rem;
